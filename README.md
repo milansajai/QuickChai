@@ -1,9 +1,7 @@
-# 🛠️ PROJECT TITLE: [INSERT YOUR CREATIVE TITLE HERE]
+# 🛠️ PROJECT TITLE: QuickChai – Smart Canteen Ordering System
 
 ## Idea Abstract
-
-**[INSERT CONCISE 2-3 SENTENCE SUMMARY HERE]**
-*Example: Our solution is a simple, real-time ordering system built for the Civil Canteen using Firebase. It provides students with a seamless ordering interface and gives staff immediate order verification tools.*
+QuickChai is a real-time digital ordering and management system for college canteens. Students can browse the live menu, place and pay for orders seamlessly, while staff can update availability, verify payments, and manage orders instantly. The system ensures faster service, reduced confusion, and live menu sync using Socket.IO.
 
 ---
 
@@ -11,8 +9,8 @@
 
 | Role | Name | GitHub Profile |
 | :--- | :--- | :--- |
-| **Team Member 1** | [Your Full Name Here] | [@YourGitHubUsername](link to your GitHub profile) |
-| **Team Member 2** | [Your Partner's Full Name Here] | [@PartnerGitHubUsername](link to partner's GitHub profile) |
+| **Team Member 1** | Milan Sajai | https://github.com/milansajai
+| **Team Member 2** | N/A | -
 
 ---
 
@@ -22,9 +20,9 @@ The following core features were successfully implemented and are showcased in t
 
 | Feature | Status | Key Implementation |
 | :--- | :--- | :--- |
-| **Student Ordering Interface** | ✅ COMPLETE | [e.g., Menu browsing, order placement, order history view] |
-| **Staff Live Order Viewer** | ✅ COMPLETE | [e.g., Real-time data feed, filtering by status] |
-| **Staff Payment Verification** | ✅ COMPLETE | [e.g., Staff clicks "Verify" button to change order status] |
+| **Student Ordering Interface** | ✅ COMPLETE | Students browse live menu, add items to cart, place orders, and view last orders with QR-based payment flow. |
+| **Staff Live Order Viewer** | ✅ COMPLETE | Staff can view incoming/past orders in real-time and track payment status. |
+| **Staff Payment Verification** | ✅ COMPLETE | Staff verifies orders after UPI payment; verified orders generate tokens for collection. |
 
 ---
 
@@ -48,9 +46,11 @@ Access the live prototype here. (If not deployed, please state 'N/A' or remove t
 
 | Category | Technologies Used | Notes |
 | :--- | :--- | :--- |
-| **Frontend** | [e.g., React, Next.js, HTML/CSS] | [e.g., Styled with Tailwind CSS, uses shadcn/ui] |
-| **Backend/Server** | [e.g., Node.js/Express, Python/Flask, N/A] | [e.g., Managed API endpoints/logic] |
-| **Database/BaaS** | [e.g., Firebase Firestore, Supabase, PostgreSQL] | [e.g., Used for storing menu and orders] |
+| **Frontend** | React.js, CSS Modules | Styled UI for student + staff dashboards|
+| **Backend/Server** | Node.js, Express.js | REST API endpoints for menu + orders |
+| **Database/BaaS** | JSON File (menu.json, orders.json) | Lightweight persistent storage (can be upgraded to MongoDB/MySQL) |
+| **Realtime** | Socket.IO | Keeps student menu and staff dashboards in sync instantly |
+| **QR Payment** | qrcode.react | Generates UPI QR codes for student payments |
 
 ---
 
@@ -60,22 +60,35 @@ If a judge needs to run your project on their machine, provide clear steps here:
 
 1.  **Clone Your Forked Repository:**
     ```bash
-    git clone [Your Forked Repo URL]
+    git clone https://github.com/milansajai/QuickChai.git
+    cd QuickChai
     ```
 2.  **Install Dependencies:**
     ```bash
-    cd your-repo-name
-    npm install  # or yarn install / pip install -r requirements.txt
+
+    # Backend
+    cd backend
+    npm install
+
+    # Frontend
+    cd ../frontend
+    npm install
+
     ```
 3.  **Setup Environment Variables (Mandatory for DB/Auth):**
-    * Create a file named `.env` in the root directory.
+    * Create a .env file in backend/ (if moving to DB or real UPI keys).
     * Add your API keys or database connection strings here:
         ```
-        REACT_APP_FIREBASE_API_KEY=YOUR_KEY
+        PORT=5000
         NODE_ENV=development
-        # etc.
+
         ```
 4.  **Start the Application:**
     ```bash
-    npm run dev # or specific start command
+    cd backend
+    node index.js
+    cd frontend
+    npm start
+
+
     ```

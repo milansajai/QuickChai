@@ -1,0 +1,10 @@
+[
+  {"id":1,"name":"Tea","price":10,"available":true},
+  {"id":2,"name":"Coffee","price":15,"available":true},
+  {"id":3,"name":"Lime Juice","price":12,"available":true},
+  {"id":4,"name":"Samosa","price":8,"available":true},
+  {"id":5,"name":"Vada","price":10,"available":true},
+  {"id":6,"name":"Idli","price":8,"available":true},
+  {"id":7,"name":"Tea Latte","price":20,"available":true},
+  {"id":8,"name":"Cold Coffee","price":25,"available":true}
+]

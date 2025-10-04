@@ -1,0 +1,47 @@
+.container {
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  background-color: #d0f0ed; /* light teal for whole page */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #004f4f;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Card behind buttons */
+.buttonCard {
+  background-color: #ffffff; /* white card for buttons */
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #004f4f;
+  background-color: #d0f0ed; /* teal buttons */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #4db6ac;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,92 @@
+/* Global container */
+.container {
+  padding: 40px 20px;
+  font-family: 'Poppins', Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to right, #ff9100, #eaff00); /* soft gradient */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main heading */
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Button group */
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.button {
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff9900, #ff0000);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #ffc875, #ff7b7b);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Highlights card */
+.highlights {
+  max-width: 700px;
+  width: 100%;
+  background-color: rgba(254, 38, 0, 0.95);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.highlights:hover {
+  transform: translateY(-5px);
+}
+
+/* Highlight items */
+.highlightItem {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d1700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 16px;
+  background-color: #ffee34;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.highlightItem span {
+  font-weight: 700;
+  color: #2d1700;
+}
+
+.highlightItem:hover {
+  background-color: rgba(254, 38, 0, 0.95);
+  transform: translateY(-2px);
+}

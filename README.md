@@ -28,7 +28,7 @@ The following core features were successfully implemented and are showcased in t
 
 ## 📼 Final Submission & Presentation
 
-### 1. Project Demo Video (MANDATORY)
+### 1. Project Demo Video
 
 The link below leads to our mandatory video presentation, which is **not longer than 5 minutes**.
 

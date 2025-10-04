@@ -1,9 +1,8 @@
-# 🛠️ PROJECT TITLE: [INSERT YOUR CREATIVE TITLE HERE]
+# 🛠️ PROJECT TITLE: QuickChai - Smart Canteen Keeping
 
 ## Idea Abstract
 
-**[INSERT CONCISE 2-3 SENTENCE SUMMARY HERE]**
-*Example: Our solution is a simple, real-time ordering system built for the Civil Canteen using Firebase. It provides students with a seamless ordering interface and gives staff immediate order verification tools.*
+QuickChai is a real-time canteen ordering system for students and staff. It allows students to browse the menu, place orders, and view order history, while staff can see live orders and verify payments instantly.
 
 ---
 
@@ -11,8 +10,7 @@
 
 | Role | Name | GitHub Profile |
 | :--- | :--- | :--- |
-| **Team Member 1** | [Your Full Name Here] | [@YourGitHubUsername](link to your GitHub profile) |
-| **Team Member 2** | [Your Partner's Full Name Here] | [@PartnerGitHubUsername](link to partner's GitHub profile) |
+| **Team Member 1** | Milan Sajai | https://github.com/milansajai |
 
 ---
 
@@ -22,9 +20,9 @@ The following core features were successfully implemented and are showcased in t
 
 | Feature | Status | Key Implementation |
 | :--- | :--- | :--- |
-| **Student Ordering Interface** | ✅ COMPLETE | [e.g., Menu browsing, order placement, order history view] |
-| **Staff Live Order Viewer** | ✅ COMPLETE | [e.g., Real-time data feed, filtering by status] |
-| **Staff Payment Verification** | ✅ COMPLETE | [e.g., Staff clicks "Verify" button to change order status] |
+| **Student Ordering Interface** | ✅ COMPLETE | Menu browsing, order placement, order history view |
+| **Staff Live Order Viewer** | ✅ COMPLETE | Real-time data feed using Firebase, filtering by status |
+| **Staff Payment Verification** | ✅ COMPLETE | Staff clicks "Verify" button to update order status in real-time |
 
 ---
 
@@ -36,21 +34,15 @@ The link below leads to our mandatory video presentation, which is **not longer 
 
 ➡️ **YouTube Video Link:** **[INSERT YOUR PUBLIC YOUTUBE LINK HERE]**
 
-### 2. Live Deployment (If Applicable)
-
-Access the live prototype here. (If not deployed, please state 'N/A' or remove this section).
-
-➡️ **Live Demo Link:** [Insert Vercel/Netlify/Render Link Here]
-
 ---
 
 ## 💻 Tech Stack Used
 
 | Category | Technologies Used | Notes |
 | :--- | :--- | :--- |
-| **Frontend** | [e.g., React, Next.js, HTML/CSS] | [e.g., Styled with Tailwind CSS, uses shadcn/ui] |
-| **Backend/Server** | [e.g., Node.js/Express, Python/Flask, N/A] | [e.g., Managed API endpoints/logic] |
-| **Database/BaaS** | [e.g., Firebase Firestore, Supabase, PostgreSQL] | [e.g., Used for storing menu and orders] |
+| **Frontend** | React, Tailwind CSS | Styled with Tailwind, uses React components for menu/order pages |
+| **Backend/Server** | Node.js, Express | Handles API endpoints for orders, user authentication, and payment verification |
+| **Database/BaaS** | Firebase Firestore | Stores student orders, menu items, and staff verification status |
 
 ---
 
@@ -60,22 +52,28 @@ If a judge needs to run your project on their machine, provide clear steps here:
 
 1.  **Clone Your Forked Repository:**
     ```bash
-    git clone [Your Forked Repo URL]
+    git clone https://github.com/milansajai/QuickChai.git
+
     ```
 2.  **Install Dependencies:**
     ```bash
-    cd your-repo-name
-    npm install  # or yarn install / pip install -r requirements.txt
+    cd QuickChai
+    npm install
     ```
 3.  **Setup Environment Variables (Mandatory for DB/Auth):**
     * Create a file named `.env` in the root directory.
-    * Add your API keys or database connection strings here:
+    * Add your firebase configuration:
         ```
-        REACT_APP_FIREBASE_API_KEY=YOUR_KEY
+        REACT_APP_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
+        REACT_APP_FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
+        REACT_APP_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+        REACT_APP_FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
+        REACT_APP_FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER_ID
+        REACT_APP_FIREBASE_APP_ID=YOUR_APP_ID
         NODE_ENV=development
-        # etc.
+
         ```
 4.  **Start the Application:**
     ```bash
-    npm run dev # or specific start command
+    npm run dev 
     ```
